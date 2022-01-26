@@ -1,4 +1,4 @@
-const {sumar} = require("./calculadora");
+const {sumar, restar, multiplicar, dividir} = require("./calculadora");
 
 describe("Pruebas en el componente calculadora", () => {
 
@@ -7,17 +7,19 @@ describe("Pruebas en el componente calculadora", () => {
         expect(sumar(3, 5)).toBe(8);
     });
 
-
-});
-
-const {restar} = require("./calculadora");
-
-describe("Pruebas en el componente calculadora", () => {
-
-    test("Pruebas en la función restar", () => {
+test("Pruebas en la función restar", () => {
 
         expect(restar(5, 3)).toBe(2);
     });
 
+test("Pruebas en la función multiplicar", () => {
+
+        expect(multiplicar(5, 3)).toBe(15);
+    });
+
+test("Pruebas en la función dividir", () => {
+
+        expect(dividir(6, 3)).toBe(2);
+    });
 
 });
